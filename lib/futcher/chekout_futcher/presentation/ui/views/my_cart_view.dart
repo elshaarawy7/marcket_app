@@ -7,7 +7,19 @@ class MyCartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white, 
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("My Cart" , style: TextStyle(
+          color: Colors.black , 
+          fontSize: 20 , 
+          fontWeight: FontWeight.bold , 
+        ),)  
+      
+      ), 
+      body: Column(
+        children: [
+          
+        ],
+      ),
     );
   }
 }

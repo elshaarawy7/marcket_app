@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PymantDetilesItem extends StatelessWidget {
   const PymantDetilesItem({super.key, this.isActive = false, required this.image});
@@ -11,39 +12,36 @@ class PymantDetilesItem extends StatelessWidget {
     return Row(
       mainAxisAlignment:MainAxisAlignment.center,
       children: [
-        AnimatedContainer(
-          duration: Duration(milliseconds: 300),
-          padding: EdgeInsets.all(12),
-          height: 70,
-          width: 100,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.white,
-            border: Border.all(
-              color: isActive ? Colors.green : Colors.white,
-              width: 2,
-            ),
-          ),
-          child: Image.asset(image),
-        ), 
+        
          
          SizedBox(height: 20,) , 
 
-        AnimatedContainer(
+         AnimatedContainer(
           duration: Duration(milliseconds: 300),
           padding: EdgeInsets.all(12),
-          height: 70,
-          width: 100,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            color: Colors.white,
-            border: Border.all(
-              color: isActive ? Colors.green : Colors.white,
-              width: 2,
+          height: 63,
+          width: 103,
+          decoration: ShapeDecoration(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15) , 
+              side: BorderSide(
+                width: 1.50 , 
+                color: isActive ? Colors.green : Colors.grey , 
+              )
+
             ),
+            
           ),
-          child: Image.asset(image),
-        ),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15) , 
+            color: Colors.white , 
+            ), 
+            child: Center(
+              child: SvgPicture.asset(image),
+            ),
+          )
+        ), 
 
       
       ],

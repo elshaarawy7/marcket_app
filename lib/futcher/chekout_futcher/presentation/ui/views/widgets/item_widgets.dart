@@ -24,7 +24,7 @@ class ItemWidgets extends StatelessWidget {
           ],
         ) ,  
 
-        SizedBox(height: 10,) , 
+        SizedBox(height: 5,) , 
 
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween, 
@@ -43,7 +43,7 @@ class ItemWidgets extends StatelessWidget {
           ],
         ) , 
 
-        SizedBox(height: 10,) , 
+        SizedBox(height: 5,) , 
 
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween, 

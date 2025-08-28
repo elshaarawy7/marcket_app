@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market_app/core/utils/custem_batton.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/item_widgets.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/total_price.dart';
 
@@ -18,11 +19,18 @@ class MyCartViewBody extends StatelessWidget {
             color: Colors.grey, 
             height: 32,  
           ) ,  
-          
+
           TotalPrice(
             title: "Total", 
             value: r'50.97',
-          ) , 
+          ) ,  
+
+          CustemBatton(
+            text: "Complete Payment" , 
+            onPressed: () {
+              
+            }, 
+            )
           
         ],
       ),

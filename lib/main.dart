@@ -16,7 +16,7 @@ class MarcketApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white , 
       ), 
-      home: MyCartView(),
+        home: MyCartView(),
     );
   }
 }

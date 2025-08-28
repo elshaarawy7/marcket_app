@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market_app/core/utils/widgets/custem_appar.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pymant_detiles_view.dart';
 
 class PymantDetils extends StatelessWidget {
@@ -6,9 +7,15 @@ class PymantDetils extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 12),
-      child: PymantDetilesBody(), 
+    return Scaffold(
+      appBar: customAppBar(
+        title: "Payment Details" , 
+
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 12),
+        child: PymantDetilesBody(), 
+      ),
     );
   }
 }

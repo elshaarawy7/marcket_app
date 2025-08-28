@@ -11,7 +11,7 @@ class MyCartViewBody extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Image.asset("assets/images/Group 6.png" , height: 500, width: 400,) , 
+          Expanded(child: Image.asset("assets/images/Group 6.png" , height: 500, width: 400,)) , 
           SizedBox(height: 20,) , 
           ItemWidgets() , 
           SizedBox(height: 5,) , 
@@ -30,7 +30,9 @@ class MyCartViewBody extends StatelessWidget {
             onPressed: () {
               
             }, 
-            )
+            ) , 
+
+            SizedBox(height: 20,)
           
         ],
       ),

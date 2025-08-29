@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 
 class ThankItem extends StatelessWidget {
-  const ThankItem({super.key});
+  const ThankItem({super.key, required this.text, required this.vlaue}); 
+
+  final String text ; 
+  final String vlaue ;
 
   @override
   Widget build(BuildContext context) {
-    return     Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12 ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween, 
-                    children: [
-                  
-                      Text("Date" , style: TextStyle(
-                        color: Colors.black , 
-                        fontSize: 18 , 
-                        fontWeight: FontWeight.w600 , 
-                      ),) ,  
-
-                      Text("01/24/2023" , style: TextStyle(
-                        color: Colors.black , 
-                        fontSize: 18 , 
-                        fontWeight: FontWeight.w600 , 
-                      ),) ,
-                    ],
-                  ),
-                );
+    return     Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+      children: [
+    
+        Text(text , style: TextStyle(
+          color: Colors.black , 
+          fontSize: 18 , 
+          fontWeight: FontWeight.w600 , 
+        ),) ,  
+    
+        Text(vlaue , style: TextStyle(
+          color: Colors.black , 
+          fontSize: 18 , 
+          fontWeight: FontWeight.w600 , 
+        ),) , 
+    
+    
+      ],
+    );
   }
 }

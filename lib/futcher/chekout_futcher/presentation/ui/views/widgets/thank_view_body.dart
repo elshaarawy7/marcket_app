@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/custem_thankyou_card.dart';
+import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/dash_line_card.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/thank_item.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/total_price.dart';
 
@@ -140,43 +142,7 @@ class ThankViewBody extends StatelessWidget {
   }
 }
 
-class DashLinCard extends StatelessWidget {
-  const DashLinCard({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: List.generate(
-        30 , 
-        (index)=> Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 2), 
-            child: Container(
-              color: Colors.grey,
-              height: 2,), 
-          ),
-        ) , 
-      ),
-    );
-  }
-} 
 
 
 
-class TankYouCard extends StatelessWidget {
-  const TankYouCard({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Color(0xFFEDEDED) , 
-        borderRadius: BorderRadius.circular(20)
-      ),
-    );
-  }
-}

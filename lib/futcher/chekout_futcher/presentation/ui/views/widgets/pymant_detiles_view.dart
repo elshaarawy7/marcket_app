@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:market_app/core/utils/custem_batton.dart';
+import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/thank_view.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/custem_created_card.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pyment_mrthod_List_view.dart';
 
@@ -44,8 +45,12 @@ class _PymantDetilesBodyState extends State<PymantDetilesBody> {
               onPressed: () {
                 if(formKey.currentState!.validate()){
                   formKey.currentState!.save();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                    return ThankView() ;
+                  }));
                   log("pymant") ; 
                 } else {
+                  
                   autovalidateMode = AutovalidateMode.always ;
                   setState(() {
                     

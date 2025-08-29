@@ -9,10 +9,11 @@ class PymentMrthodListView extends StatefulWidget {
 }
 
 class _PymentMrthodListViewState extends State<PymentMrthodListView> {
-  final List<String> pymentMethodItem  = const [
-   "assets/images/SVGRepo_iconCarrier.svg"
-   "assets/images/Group.svg" , 
-  ]; 
+  final List<String> pymentMethodItem = const [
+  "assets/images/SVGRepo_iconCarrier.svg", // <--- قم بإضافة الفاصلة هنا
+  "assets/images/Group.svg"
+];
+ 
 
   int selectedIndex = 0 ;
 

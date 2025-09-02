@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:market_app/core/utils/custem_batton.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/pymant_detils.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/item_widgets.dart';
+import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pymrnt_method_battom_shet.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/total_price.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -29,9 +30,16 @@ class MyCartViewBody extends StatelessWidget {
           CustemBatton(
             text: "Complete Payment",
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => PymantDetils()),
+              // Navigator.push(
+              // context,
+              // MaterialPageRoute(builder: (context) => PymantDetils());
+              //);
+
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return PymrntMethodBattomShet();
+                },
               );
             },
           ),

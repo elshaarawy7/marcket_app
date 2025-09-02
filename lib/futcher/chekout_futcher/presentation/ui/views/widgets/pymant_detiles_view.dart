@@ -7,60 +7,56 @@ import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pyment_mrthod_List_view.dart';
 
 class PymantDetilesBody extends StatefulWidget {
-  const PymantDetilesBody({super.key}); 
+  const PymantDetilesBody({super.key});
 
   @override
   State<PymantDetilesBody> createState() => _PymantDetilesBodyState();
 }
 
 class _PymantDetilesBodyState extends State<PymantDetilesBody> {
-    final GlobalKey<FormState> formKey = GlobalKey() ; 
+  final GlobalKey<FormState> formKey = GlobalKey();
 
-    AutovalidateMode autovalidateMode = AutovalidateMode.disabled ;
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-      
-         SliverToBoxAdapter(child: PymentMrthodListView()) , 
-          SliverToBoxAdapter(
-          child: SizedBox(height: 30,),
-         ) ,
-         SliverToBoxAdapter(child: CustemCreatedCard(
-          formKey: formKey,
-          autovalidateMode: autovalidateMode,
-         )) ,
+        SliverToBoxAdapter(child: PymentMrthodListView()),
+        SliverToBoxAdapter(child: SizedBox(height: 30)),
+        SliverToBoxAdapter(
+          child: CustemCreatedCard(
+            formKey: formKey,
+            autovalidateMode: autovalidateMode,
+          ),
+        ),
 
-         SliverToBoxAdapter(
-          child: SizedBox(height: 30,),
-         ) ,
-         SliverToBoxAdapter(
-
-
+        SliverToBoxAdapter(child: SizedBox(height: 30)),
+        SliverToBoxAdapter(
           child: Align(
             alignment: Alignment.bottomCenter,
             child: CustemBatton(
-              text: "Pay", 
+              text: "Pay",
               onPressed: () {
-                if(formKey.currentState!.validate()){
+                if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return ThankView() ;
-                  }));
-                  log("pymant") ; 
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ThankView();
+                      },
+                    ),
+                  );
+                  log("pymant");
                 } else {
-                  
-                  autovalidateMode = AutovalidateMode.always ;
-                  setState(() {
-                    
-                  });
+                  autovalidateMode = AutovalidateMode.always;
+                  setState(() {});
                 }
               },
             ),
           ),
-         ) , 
-      ]
+        ),
+      ],
     );
   }
 }

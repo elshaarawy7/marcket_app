@@ -5,63 +5,80 @@ class ItemWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column( 
+    return Column(
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Order Subtotal" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 20 , 
-              fontWeight: FontWeight.w500, 
-            ),) ,  
+            Text(
+              "Order Subtotal",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
 
-            Text(r"$42.97" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 20 , 
-              fontWeight: FontWeight.w500 , 
-            ),) ,  
+            Text(
+              r"$42.97",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ],
-        ) ,  
+        ),
 
-        SizedBox(height: 5,) , 
-
-          Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, 
-          children: [
-            Text("Discount" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 20 , 
-              fontWeight: FontWeight.w500, 
-            ),) ,  
-
-            Text(r"$0" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 20 , 
-              fontWeight: FontWeight.w500 , 
-            ),) ,  
-          ],
-        ) , 
-
-        SizedBox(height: 5,) , 
+        SizedBox(height: 5),
 
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, 
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Shipping" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 20 , 
-              fontWeight: FontWeight.w500, 
-            ),) ,  
+            Text(
+              "Discount",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
 
-            Text(r"$8" , style: TextStyle(
-              color: Colors.black , 
-              fontSize: 20 , 
-              fontWeight: FontWeight.w500 , 
-            ),) ,  
+            Text(
+              r"$0",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ],
-        ) , 
+        ),
 
+        SizedBox(height: 5),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              "Shipping",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+
+            Text(
+              r"$8",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

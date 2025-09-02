@@ -8,12 +8,7 @@ class MyCartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar(
-        title: "My Cart" , 
-        onBack: () {
-          
-        },
-      ),
+      appBar: customAppBar(title: "My Cart", onBack: () {}),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: MyCartViewBody(),

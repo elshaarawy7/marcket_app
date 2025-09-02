@@ -18,6 +18,6 @@ AppBar customAppBar({required String title, VoidCallback? onBack}) {
       icon: const Icon(Icons.arrow_back, color: Colors.black, size: 30),
       onPressed: onBack,
     ),
-    elevation: 0, 
+    elevation: 0,
   );
 }

@@ -8,13 +8,10 @@ class PymantDetils extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar(
-        title: "Payment Details" , 
-
-      ),
+      appBar: customAppBar(title: "Payment Details"),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 12),
-        child: PymantDetilesBody(), 
+        child: PymantDetilesBody(),
       ),
     );
   }

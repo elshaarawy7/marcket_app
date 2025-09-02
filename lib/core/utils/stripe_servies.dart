@@ -5,39 +5,37 @@ import 'package:market_app/futcher/chekout_futcher/presentation/data/payment_int
 import 'package:market_app/futcher/chekout_futcher/presentation/data/payment_intant_model/payment_intet_input_model.dart';
 
 class StripeServies {
+  final ApiServies api_servies = ApiServies();
 
-  final ApiServies  api_servies = ApiServies();
- Future <PaymentIntantModel>createPaymentIntent(PaymentIntantModel paymentIntantnodel)async{
+  Future<PaymentIntantModel> createPaymentIntent(PaymentIntetInputModel paymentInputModel) async {
+    var response = await api_servies.post(
+      body: paymentInputModel.tojson(),
+      url: 'https://api.stripe.com/v1/payment_intents',
+      token: ApiKey.secretKey,
+    );
 
-     final inputModel = PaymentIntetInputModel(
-    amount: paymentIntantnodel.amount.toString(),
-    currency: paymentIntantnodel.currency.toString(),
-  );
+    var paymentIntantModel = PaymentIntantModel.fromJson(response.data);
+    return paymentIntantModel;
+  }
 
-   var response = await  api_servies.post(
-      body: inputModel.tojson() ,
-      url: 'https://api.stripe.com/v1/payment_intents', 
-      token: ApiKey.secretKey, 
-    ); 
-
-    var paymentIntetModel =PaymentIntantModel.fromJson(response.data) ;
-
-    return paymentIntetModel; 
-
-    
-  } 
-
-  Future iniPaymantSheet({required String  paymentIntentClientSecret})async{
-    Stripe.instance.initPaymentSheet(
+  Future iniPaymantSheet({required String paymentIntentClientSecret}) async {
+    await Stripe.instance.initPaymentSheet(
       paymentSheetParameters: SetupPaymentSheetParameters(
-        paymentIntentClientSecret:  paymentIntentClientSecret , 
-        merchantDisplayName: "Elshaarawy"
-      ) , 
-      
+        paymentIntentClientSecret: paymentIntentClientSecret,
+        merchantDisplayName: "Elshaarawy",
+      ),
     );
   }
 
-  Future dispPlayPaymantSheet()async{
-    Stripe.instance.presentPaymentSheet();
+  Future dispPlayPaymantSheet() async {
+    await Stripe.instance.presentPaymentSheet();
+  }
+
+  Future mackupPayment({required PaymentIntetInputModel paymentInputModel}) async {
+    var paymentIntantModel = await createPaymentIntent(paymentInputModel);
+    await iniPaymantSheet(
+      paymentIntentClientSecret: paymentIntantModel.clientSecret!,
+    );
+    await dispPlayPaymantSheet();
   }
 }

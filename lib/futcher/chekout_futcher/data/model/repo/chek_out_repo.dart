@@ -1,23 +1,12 @@
 import 'package:dartz/dartz.dart';
-import 'package:market_app/core/chekout_futcher/presentation/data/payment_intant_model/payment_intant_model.dart';
+import 'package:market_app/core/errors/fuiler.dart';
+import 'package:market_app/futcher/chekout_futcher/presentation/data/payment_intant_model/payment_intet_input_model.dart';
 
 abstract class ChekOutRepo {
 
   Future<Either<Fuiler , void >> mackupPayment({
-    required PaymentIntantModel paymentIntetmodel 
+    required PaymentIntetInputModel paymentIntetInputModel 
   });
   
 
-}
-
-abstract class Fuiler {
-  final String errMassege ;
-
-  Fuiler({required this.errMassege}); 
-
-} 
-
-class serverFuiler extends Fuiler {
-  serverFuiler({required super.errMassege});
-  
 }

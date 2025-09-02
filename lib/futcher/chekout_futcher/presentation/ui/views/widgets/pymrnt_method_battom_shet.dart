@@ -16,9 +16,20 @@ class PymrntMethodBattomShet extends StatelessWidget {
 
           SizedBox(height: 32),
 
-          CustemBatton(text: "Contanou", onPressed: () {}),
+          CustemBattonBlocconsumer(),
         ],
       ),
     );
+  }
+}
+
+class CustemBattonBlocconsumer extends StatelessWidget {
+  const CustemBattonBlocconsumer({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CustemBatton(text: "Contanou", onPressed: () {});
   }
 }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustemBatton extends StatelessWidget {
-  const CustemBatton({super.key, required this.text, this.onPressed});
+  const CustemBatton({super.key, required this.text, this.onPressed , this.isLoding = false});
 
   final String text;
   final void Function()? onPressed;
+  final bool isLoding ;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class CustemBatton extends StatelessWidget {
           borderRadius: BorderRadiusGeometry.circular(12),
         ),
       ),
-      child: Text(
+      child: isLoding ? CircularProgressIndicator() : Text(
         text,
         style: TextStyle(
           color: Colors.black,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_app/core/utils/custem_batton.dart';
+import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/custem_batton_bloc_cunsumer.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pyment_mrthod_List_view.dart';
 
 class PymrntMethodBattomShet extends StatelessWidget {
@@ -20,16 +21,5 @@ class PymrntMethodBattomShet extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class CustemBattonBlocconsumer extends StatelessWidget {
-  const CustemBattonBlocconsumer({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return CustemBatton(text: "Contanou", onPressed: () {});
   }
 }

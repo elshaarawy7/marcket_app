@@ -1,13 +1,18 @@
+// في ملف tip.dart
+import 'package:json_annotation/json_annotation.dart';
+
+part 'tip.g.dart';
+
+@JsonSerializable()
 class Tip {
-  Tip();
+  // اجعل جميع الخصائص اختيارية بإضافة '?'
+  final String? id;
+  final double? amount;
+  final String? currency;
 
-  factory Tip.fromJson(Map<String, dynamic> json) {
-    // TODO: implement fromJson
-    throw UnimplementedError('Tip.fromJson($json) is not implemented');
-  }
+  Tip({this.id, this.amount, this.currency});
 
-  Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
-  }
+  factory Tip.fromJson(Map<String, dynamic> json) => _$TipFromJson(json);
+
+  Map<String, dynamic> toJson() => _$TipToJson(this);
 }

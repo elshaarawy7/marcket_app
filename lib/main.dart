@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:market_app/core/utils/api_key.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/my_cart_view.dart';
 
 void main() {
+  Stripe.publishableKey = ApiKey.PublishableKey;
   runApp(const MarcketApp());
 }
 

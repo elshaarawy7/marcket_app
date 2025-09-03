@@ -6,6 +6,7 @@ import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pymrnt_method_battom_shet.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/total_price.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 class MyCartViewBody extends StatelessWidget {
   const MyCartViewBody({super.key});
 
@@ -41,8 +42,8 @@ class MyCartViewBody extends StatelessWidget {
                 builder: (context) {
                   return BlocProvider(
                     create: (context) => PayemntCubit(CheakOutRepoIpml()),
-                    child:  PymrntMethodBattomShet(),
-                  ) ;
+                    child: PymrntMethodBattomShet(),
+                  );
                 },
               );
             },

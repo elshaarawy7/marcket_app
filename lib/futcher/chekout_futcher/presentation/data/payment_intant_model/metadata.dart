@@ -1,13 +1,15 @@
 class Metadata {
-  Metadata();
+  String? orderId; // أو أي key متوقع، وممكن تسيبه فاضي لو مش محتاجه
+
+  Metadata({this.orderId});
 
   factory Metadata.fromJson(Map<String, dynamic> json) {
-    // TODO: implement fromJson
-    throw UnimplementedError('Metadata.fromJson($json) is not implemented');
+    return Metadata(
+      orderId: json['orderId'] as String?, // أو أي key انت ضايفه
+    );
   }
 
   Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
+    return {'orderId': orderId};
   }
 }

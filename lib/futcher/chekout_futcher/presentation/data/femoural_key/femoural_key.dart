@@ -19,17 +19,18 @@ class FemouralKeyModel {
     this.secret,
   });
 
-  factory FemouralKeyModel.fromJson(Map<String, dynamic> json) => FemouralKeyModel(
-    id: json['id'] as String?,
-    object: json['object'] as String?,
-    associatedObjects: (json['associated_objects'] as List<dynamic>?)
-        ?.map((e) => AssociatedObject.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    created: json['created'] as int?,
-    expires: json['expires'] as int?,
-    livemode: json['livemode'] as bool?,
-    secret: json['secret'] as String?,
-  );
+  factory FemouralKeyModel.fromJson(Map<String, dynamic> json) =>
+      FemouralKeyModel(
+        id: json['id'] as String?,
+        object: json['object'] as String?,
+        associatedObjects: (json['associated_objects'] as List<dynamic>?)
+            ?.map((e) => AssociatedObject.fromJson(e as Map<String, dynamic>))
+            .toList(),
+        created: json['created'] as int?,
+        expires: json['expires'] as int?,
+        livemode: json['livemode'] as bool?,
+        secret: json['secret'] as String?,
+      );
 
   Map<String, dynamic> toJson() => {
     'id': id,

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:market_app/futcher/chekout_futcher/presentation/ui/views/widgets/pymant_detiles_item.dart';
 
 class PymentMrthodListView extends StatefulWidget {
-  const PymentMrthodListView({super.key});
+  const PymentMrthodListView({super.key, required this.upDatePatmentMethod});
+
+  final Function({required int index}) upDatePatmentMethod ;
 
   @override
   State<PymentMrthodListView> createState() => _PymentMrthodListViewState();
@@ -30,6 +32,7 @@ class _PymentMrthodListViewState extends State<PymentMrthodListView> {
               onTap: () {
                 selectedIndex = index;
                 setState(() {});
+                widget.upDatePatmentMethod(index: selectedIndex) ;
               },
 
               child: PymantDetilesItem(

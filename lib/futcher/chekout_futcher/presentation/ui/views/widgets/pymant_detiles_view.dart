@@ -22,7 +22,11 @@ class _PymantDetilesBodyState extends State<PymantDetilesBody> {
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverToBoxAdapter(child: PymentMrthodListView()),
+       /* SliverToBoxAdapter(
+          child: PymentMrthodListView(
+            upDatePatmentMethod: ({required index}) {},
+          ),
+        ),*/
         SliverToBoxAdapter(child: SizedBox(height: 30)),
         SliverToBoxAdapter(
           child: CustemCreatedCard(

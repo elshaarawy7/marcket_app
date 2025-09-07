@@ -1,16 +1,43 @@
-# market_app
+# 🛒 Market App  
 
-A new Flutter project.
+A modern **Flutter Mobile Application** with **Stripe** and **PayPal** integration for secure and seamless payments.  
+This project demonstrates how to build a complete shopping experience with **cross-platform support** and a clean UI.  
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features  
 
-A few resources to get you started if this is your first Flutter project:
+- 📱 Cross-platform mobile app (Android & iOS)  
+- 💳 Secure payments using **Stripe** and **PayPal**  
+- 🛍️ Product browsing and selection  
+- 🖼️ Clean & modern UI design  
+- ⚡ Built with **Flutter & Dart**  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Screenshots  
+
+<p align="center">
+  <img src="https://github.com/elshaarawy7/marcket_app/blob/main/assets/screenshots/Screenshot_1757259889.png" width="250" />
+  <img src="https://github.com/elshaarawy7/marcket_app/blob/main/assets/screenshots/Screenshot_1757259899.png" width="250" />
+  <img src="https://github.com/elshaarawy7/marcket_app/blob/main/assets/screenshots/Screenshot_1757259913.png" width="250" />
+  <img src="https://github.com/elshaarawy7/marcket_app/blob/main/assets/screenshots/Screenshot_1757259930.png" width="250" />
+</p>  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **Flutter** (cross-platform framework)  
+- **Dart** (programming language)  
+- **Stripe** (payment gateway)  
+- **PayPal** (payment gateway)  
+
+---
+
+## 📂 Project Setup  
+
+Clone the repo:  
+```bash
+git clone https://github.com/elshaarawy7/marcket_app.git
+
